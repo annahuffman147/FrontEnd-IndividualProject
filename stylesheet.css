@@ -1,0 +1,9 @@
+.box1 {
+  box-sizing: border-box;
+  width: 32%;
+  height: auto;
+  background-color: #5858FA;
+  margin: 5px;
+  padding: 1em;
+  float: left;
+}
