@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel='stylesheet' href='stylesheet.css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel='stylesheet' href='sandstoneBootstrap.css'>
+    <link rel='stylesheet' href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src='main.js'></script>
     <meta charset="utf-8">
     <title>Dress for the Weather</title>
   </head>
   <body>
-    <header>
-      <div class="navigation">
-        <ul class="nav nav-pills">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
-          <li role="presentation"><a href="#">About</a></li>
-          <li role="presentation"><a href="#">Contact</a></li>
-        </ul>
-      </div>
+      <header>
+        <div class="jumbotron">
+          <h1>Dress for the Weather</h1>
+        </div>
+      </header>
+      <main>
+        <form class="form-horizontal">
+          <fieldset>
+            <legend>Identify your location</legend>
+            <div class="form-group">
+              <label for="GET-city" class="col-lg-2 control-label">City:</label>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" id="city" placeholder="City">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Get-state" class="col-lg-2 control-label">State:</label>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" id="state" placeholder="State">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Save this location
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <div id='condition'>
 
-      <div class="jumbotron">
-        <h1>Dress for the Weather</h1>
-        <p></p>
-      </div>
-    </header>
-    <main>
-      <form class="cityState" action="index.html" method="post">
-        <h1>Identify a location</h1>
-        <label>City</label>
-        <input id='city' name='city' type='text'>
-        <label>State</label>
-        <input id='state' name='state' type='text'>
-        <button id= 'submit' type="submit" name="submit">Submit</button>
-      </form>
-      <div class='box1' id='tempBox'>
-        <h1>Current Temperature</h2>
-          <p id='temperature'></p>
-          <p id='skies'></p>
 
-    </main>
-    <footer>
+        </div>
+        <div id='clothes'>
 
-    </footer>
-
+        </div>
+      </main>
+      <footer class='panel-footer container'>
+        <figure class="Seasons" id='correctSeason'></figure>
+          <div class='box1'>
+            <h3><strong>Current Forecast</strong></h3>
+            <div>
+              <div>
+                <label for="Return-Temp">Temperature:</label>
+                <output name="temperature" id='temperature'></output>
+              </div>
+              <div>
+                <label for="Return-Condition">Condition:</label>
+                <output name="condition" id='skies'></output>
+              </div>
+              <div>
+                <label for="Return-date">Last Updated:</label>
+                <output name="returnDate" id='date'></output>
+              </div>
+            </div>
+          </div>
+      </footer>
   </body>
 </html>

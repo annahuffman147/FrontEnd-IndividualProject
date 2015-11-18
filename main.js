@@ -1,3 +1,5 @@
+//clothes will be an array of objects with the following defined: temp range, season, condition,
+
 
 //document ready
 //event listener
@@ -20,6 +22,8 @@ function AJAX(city, state){
 function display(weatherYahoo) {
   displayTemp(weatherYahoo)
   displaySkies(weatherYahoo)
+  displayDate(weatherYahoo)
+  correctSeason(weatherYahoo)
 }
 
 function displayTemp(data){
@@ -29,8 +33,85 @@ function displayTemp(data){
 function displaySkies(data){
   var skies = data.query.results.channel.item.condition.text
   $('#skies').text(skies)
-}
+};
 
 
+var fullYear = (new Date().getFullYear())
+
+function getFirstDayThisSpring (){
+  var dateThisSpring = '20 March ' + fullYear + ' 00:00:00'
+  var firstThisSpring = new Date(dateThisSpring);
+  var n = firstThisSpring.valueOf();
+  return n
+};
+
+function getFirstDaySummer (){
+  var dateSummer = '20 June ' + fullYear + ' 00:00:00'
+  var firstSummer = new Date(dateSummer);
+  var n = firstSummer.valueOf();
+  return n
+};
+
+function getFirstDayFall (){
+  var dateFall = '23 September ' + fullYear
+  var firstFall = new Date(dateFall);
+  var n = firstFall.valueOf();
+  return n
+};
+
+function getFirstDayWinter (){
+  var dateWinter ='22 December ' + fullYear + ' 00:00:00'
+  var firstWinter = new Date(dateWinter);
+  var n = firstWinter.valueOf();
+  return n
+};
+
+function getFirstDayNextSpring (){
+  var nextYear = fullYear + 1
+  var dateNextSpring = '20 March ' + nextYear + ' 00:00:00'
+  var firstNextSpring = new Date(dateNextSpring);
+  var n = firstNextSpring.valueOf();
+  return n
+};
+
+
+var seasonFall = './images/fall.svg'
+var seasonWinter = './images/winter.svg'
+var seasonSummer = './images/summer.svg'
+var seasonSpring = './images/spring.svg'
+
+var seasonImg = [seasonSpring, seasonSummer, seasonFall, seasonWinter]
+
+function displayDate(data){
+  var date = data.query.results.channel.item.condition.date
+  console.log(date);
+  $('#date').text(date)
+};
+
+function correctSeason (data) {
+  var d = new Date();
+  var numToday = d.valueOf();
+  var numSpring = getFirstDayThisSpring();
+  var numSummer = getFirstDaySummer();
+  var numFall = getFirstDayFall();
+  var numWinter = getFirstDayWinter();
+  console.log(numToday);
+  if (numToday >= numSpring && numToday < numSummer) {
+    console.log('Spring');
+    $('.Seasons').append('<img src="'+seasonImg[0]+'">');
+  }
+  else if (numToday >= numSummer && numToday < numFall) {
+    console.log('Summer');
+    $('.Seasons').append('<img src="'+seasonImg[1]+'">');
+  }
+  else if (numToday >= numFall && numToday < numWinter) {
+    console.log('Fall');
+    $('.Seasons').append('<img src="'+seasonImg[2]+'">');
+  }
+  else {
+    console.log('Winter');
+    $('.Seasons').append('<img src="'+seasonImg[3]+'">op');
+    }
+  }
 
 AJAX('denver', 'co')

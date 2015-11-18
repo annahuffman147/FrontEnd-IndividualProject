@@ -1,0 +1,247 @@
+var Conditions = [
+  {codeValue: "0",
+    description: "tornado",
+    imageSource: "./images/tornado.svg",
+    imageTag: '<img src="./images/tornado.svg" alt="Tornado">'
+  },
+  {codeValue: "1",
+    description: "tropical storm",
+    imageSource: '',
+    imageTag: 'return "Tropical Storm"'
+  },
+  {codeValue: "2",
+    description: "hurricane",
+    imageSource: '',
+    imageTag: 'return "Hurricane"'
+  },
+  {codeValue: "3",
+    description: "severe thunderstorms",
+    imageSource: "./images/thunderstorm.svg",
+    imageTag: '<img src="./images/thunderstorm.svg" alt="Severe Thunderstorm">'
+  },
+  {codeValue: "4",
+    description: "thunderstorms",
+    imageSource: "./images/thunderstorm.svg",
+    imageTag: '<img src="./images/thunderstorm.svg" alt="Thunderstorm">'
+  },
+  {codeValue: "5",
+    description: "mixed rain and snow",
+    imageSource: "./images/rainAndSnow.svg",
+    imageTag: '<img src="./images/rainAndSnow.svg" alt="Rain and Snow">'
+  },
+  {codeValue: "6",
+    description: "mixed rain and sleet",
+    imageSource: "./images/rainAndSleet.svg",
+    imageTag: '<img src="./images/rainAndSleet.svg" alt="Rain and Sleet">'
+  },
+  {codeValue: "7",
+    description: "mixed snow and sleet",
+    imageSource: "./images/snowAndSleet.svg",
+    imageTag: '<img src="./images/snowAndSleet.svg" alt="Snow and Sleet">'
+  },
+  {codeValue: "8",
+    description: "freezing drizzle",
+    imageSource: "./images/rainAndSleet.svg",
+    imageTag: '<img src="./images/rainAndSleet.svg" alt="Freezing Drizzle">'
+  },
+  {codeValue: "9",
+    description: "drizzle",
+    imageSource: "./images/rain.svg",
+    imageTag: '<img src="./images/rain.svg" alt="Drizzle">'
+  },
+  {codeValue: "10",
+    description: "freezing rain",
+    imageSource: "./images/rainAndSleet.svg",
+    imageTag: '<img src="./images/rainAndSleet.svg" alt="Freezing Rain">'
+  },
+  {codeValue: "11",
+    description: "showers",
+    imageSource: "./images/rain.svg",
+    imageTag: '<img src="./images/rain.svg" alt="Showers">'
+  },
+  {codeValue: "12",
+    description: "showers",
+    imageSource: "./images/rain.svg",
+    imageTag: '<img src="./images/rain.svg" alt="Showers">'
+  },
+  {codeValue: "13",
+    description: "snow flurries",
+    imageSource: "./images/snow.svg",
+    imageTag: '<img src="./images/snow.svg" alt="Snow Flurries">'
+  },
+  {codeValue: "14",
+    description: "light snow showers",
+    imageSource: "./images/snow.svg",
+    imageTag: '<img src="./images/snow.svg" alt="Light Snow Showers">'
+  },
+  {codeValue: "15",
+    description: "blowing snow",
+    imageSource: "./images/snow.svg",
+    imageTag: '<img src="./images/snow.svg" alt="Blowing Snow">'
+  },
+  {codeValue: "16",
+    description: "snow",
+    imageSource: "./images/snow.svg",
+    imageTag: '<img src="./images/snow.svg" alt="Snow">'
+  },
+  {codeValue: "17",
+    description: "hail",
+    imageSource: "./images/hail.svg",
+    imageTag: '<img src="./images/hail.svg" alt="Hail">'
+  },
+  {codeValue: "18",
+    description: "sleet",
+    imageSource: "./images/sleet.svg",
+    imageTag: '<img src="./images/sleet.svg" alt="Sleet">'
+  },
+  {codeValue: "19",
+    description: "dust",
+    imageSource: "",
+    imageTag: 'return "Dust"'
+  },
+  {codeValue: "20",
+    description: "foggy",
+    imageSource: "",
+    imageTag: 'return "Foggy"'
+  },
+  {codeValue: "21",
+    description: "haze",
+    imageSource: "",
+    imageTag: 'return "Haze"'
+  },
+  {codeValue: "22",
+    description: "smoky",
+    imageSource: "",
+    imageTag: 'return "Smoky"'
+  },
+  {codeValue: "23",
+    description: "blustery",
+    imageSource: "./images/windy.svg",
+    imageTag: '<img src="./images/windy.svg" alt="Blustery">'
+  },
+  {codeValue: "24",
+    description: "windy",
+    imageSource: "./images/windy.svg",
+    imageTag: '<img src="./images/windy.svg" alt="Windy">'
+  },
+  {codeValue: "25",
+    description: "cold",
+    imageSource: "./images/cold.svg",
+    imageTag: '<img src="./images/cold.svg" alt="Cold">'
+  },
+  {codeValue: "26",
+    description: "cloudy",
+    imageSource: "./images/cloudy.svg",
+    imageTag: '<img src="./images/cloudy.svg" alt="Cloudy">'
+  },
+  {codeValue: "27",
+    description: "mostly cloudy (night)",
+    imageSource: "./images/mostlyCloudy.svg",
+    imageTag: '<img src="./images/mostlyCloudy.svg" alt="Mostly Cloudy">'
+  },
+  {codeValue: "28",
+    description: "mostly cloudy (day)",
+    imageSource: "./images/mostlyCloudy.svg",
+    imageTag: '<img src="./images/mostlyCloudy.svg" alt="Mostly Cloudy">'
+  },
+  {codeValue: "29",
+    description: "partly cloudy (night)",
+    imageSource: "./images/partlyCloudy.svg",
+    imageTag: '<img src="./images/partlyCloudy.svg" alt="Partly Cloudy">'
+  },
+  {codeValue: "30",
+    description: "partly cloudy (day)",
+    imageSource: "./images/partlyCloudy.svg",
+    imageTag: '<img src="./images/partlyCloudy.svg" alt="Partly Cloudy">'
+  },
+  {codeValue: "31",
+    description: "clear (night)",
+    imageSource: "./images/clearNight.svg",
+    imageTag: '<img src="./images/clearNight.svg" alt="Clear Night">'
+  },
+  {codeValue: "32",
+    description: "sunny",
+    imageSource: "./images/sunny.svg",
+    imageTag: '<img src="./images/sunny.svg" alt="Sunny">'
+  },
+  {codeValue: "33",
+    description: "fair (night)",
+    imageSource: "./images/fair.svg",
+    imageTag: '<img src="./images/fair.svg" alt="Fair">'
+  },
+  {codeValue: "34",
+    description: "fair (day)",
+    imageSource: "./images/fair.svg",
+    imageTag: '<img src="./images/fair.svg" alt="Fair">'
+  },
+  {codeValue: "35",
+    description: "mixed rain and hail",
+    imageSource: "./images/rainAndHail.svg",
+    imageTag: '<img src="./images/rainAndHail.svg" alt="Rain and Hail">'
+  },
+  {codeValue: "36",
+    description: "hot",
+    imageSource: "./images/hotSunny.svg",
+    imageTag: '<img src="./images/hotSunny.svg" alt="Hot">'
+  },
+  {codeValue: "37",
+    description: "isolated thunderstorms",
+    imageSource: "./images/scatteredThunderstorm.svg",
+    imageTag: '<img src="./images/scatteredThunderstorm.svg" alt="Isolated Thunderstorm">'
+  },
+  {codeValue: "38",
+    description: "scattered thunderstorms",
+    imageSource: "./images/scatteredThunderstorm.svg",
+    imageTag: '<img src="./images/scatteredThunderstorm.svg" alt="Scattered Thunderstorm">'
+  },
+  {codeValue: "39",
+    description: "scattered thunderstorms",
+    imageSource: "./images/scatteredThunderstorm.svg",
+    imageTag: '<img src="./images/scatteredThunderstorm.svg" alt="Scattered Thunderstorm">'
+  },
+  {codeValue: "40",
+    description: "scattered showers",
+    imageSource: "./images/scatteredRain.svg",
+    imageTag: '<img src="./images/scatteredRain.svg" alt="Scattered Showers">'
+  },
+  {codeValue: "41",
+    description: "heavy snow",
+    imageSource: "./images/heavySnow.svg",
+    imageTag: '<img src="./images/heavySnow.svg" alt="Heavy Snow">'
+  },
+  {codeValue: "42",
+    description: "scattered snow showers",
+    imageSource: "./images/scatteredSnow.svg",
+    imageTag: '<img src="./images/scatteredSnow.svg" alt="Scattered Snow Showers">'
+  },
+  {codeValue: "43",
+    description: "heavy snow",
+    imageSource: "./images/heavySnow.svg",
+    imageTag: '<img src="./images/heavySnow.svg" alt="Heavy Snow">'
+  },
+  {codeValue: "44",
+    description: "partly cloudy",
+    imageSource: "./images/partlyCloudy.svg",
+    imageTag: '<img src="./images/partlyCloudy.svg" alt="Partly Cloudy">'
+  },
+  {codeValue: "45",
+    description: "thundershowers",
+    imageSource: "./images/thunderstorm.svg",
+    imageTag: '<img src="./images/thunderstorm.svg" alt="Thundershowers">'
+  },
+  {codeValue: "46",
+    description: "snow showers",
+    imageSource: "./images/snow.svg",
+    imageTag: '<img src="./images/snow.svg" alt="Snow Showers">'
+  },
+  {codeValue: "47",
+    description: "isolated thundershowers",
+    imageSource: "./images/scatteredThunderstorm.svg",
+    imageTag: '<img src="./images/scatteredThunderstorm.svg" alt="Isolated Thundershowers">'
+  },
+  {codeValue: "3200",
+    description: "not available",
+    imageSource: "",
+    imageTag: 'return "Data Not Available At This Time"'
+  }
+]
