@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' href='sandstoneBootstrap.css'>
-    <link rel='stylesheet' href="stylesheet.css">
+    <link rel='stylesheet' href='./css/sandstoneBootstrap.css'>
+    <link rel='stylesheet' href="./css/stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src='main.js'></script>
+    <!-- <script src='./js/gulpfile.js'></script> -->
+    <script src='./js/imageVariables.js'></script>
+    <script src='./js/main.js'></script>
     <meta charset="utf-8">
     <title>Dress for the Weather</title>
   </head>
@@ -37,13 +39,13 @@
             </div>
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id='submit' type="submit" class="btn btn-primary">Submit</button>
               </div>
             </div>
           </fieldset>
         </form>
-        <div id='condition'>
-
+        <div>
+          <figure class="currentCondition" id='conditionImage'></figure>
 
         </div>
         <div id='clothes'>
@@ -51,7 +53,9 @@
         </div>
       </main>
       <footer class='panel-footer container'>
-        <figure class="Seasons" id='correctSeason'></figure>
+        <figure class="Seasons" id='correctSeason'>
+          <img src="./images/fourSeasons.svg" alt="Four Seasons">
+        </figure>
           <div class='box1'>
             <h3><strong>Current Forecast</strong></h3>
             <div>

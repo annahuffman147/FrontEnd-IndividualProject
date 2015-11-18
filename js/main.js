@@ -36,6 +36,8 @@ function displaySkies(data){
 };
 
 
+
+
 var fullYear = (new Date().getFullYear())
 
 function getFirstDayThisSpring (){
@@ -82,11 +84,12 @@ var seasonSpring = './images/spring.svg'
 
 var seasonImg = [seasonSpring, seasonSummer, seasonFall, seasonWinter]
 
-function displayDate(data){
+function displayDate(data) {
   var date = data.query.results.channel.item.condition.date
   console.log(date);
   $('#date').text(date)
 };
+
 
 function correctSeason (data) {
   var d = new Date();
@@ -98,20 +101,18 @@ function correctSeason (data) {
   console.log(numToday);
   if (numToday >= numSpring && numToday < numSummer) {
     console.log('Spring');
-    $('.Seasons').append('<img src="'+seasonImg[0]+'">');
+    $('.Seasons').html('<img src="'+seasonImg[0]+'">');
   }
   else if (numToday >= numSummer && numToday < numFall) {
     console.log('Summer');
-    $('.Seasons').append('<img src="'+seasonImg[1]+'">');
+    $('.Seasons').html('<img src="'+seasonImg[1]+'">');
   }
   else if (numToday >= numFall && numToday < numWinter) {
     console.log('Fall');
-    $('.Seasons').append('<img src="'+seasonImg[2]+'">');
+    $('.Seasons').html('<img src="'+seasonImg[2]+'">');
   }
   else {
     console.log('Winter');
-    $('.Seasons').append('<img src="'+seasonImg[3]+'">op');
+    $('.Seasons').html('<img src="'+seasonImg[3]+'">');
     }
   }
-
-AJAX('denver', 'co')
