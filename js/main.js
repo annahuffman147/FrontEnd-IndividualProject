@@ -26,6 +26,23 @@ function display(weatherYahoo) {
   correctSeason(weatherYahoo)
   correctCondition(weatherYahoo)
   searchDescription(weatherYahoo)
+  displayClothes(weatherYahoo)
+}
+
+function displayClothes () {
+  var rnd = Math.floor(Math.random() * Clothes.length);
+  if(rnd == 0){
+    rnd = 1;
+  }
+  $('#clothes1').html(Clothes[rnd].imageTag);
+  // $('#clothes2').html(Clothes[rnd].imageTag);
+  // $('#clothes3').html(Clothes[rnd].imageTag);
+  // $('#clothes4').html(Clothes[rnd].imageTag);
+  // $('#clothes5').html(Clothes[rnd].imageTag);
+  // $('#clothes6').html(Clothes[rnd].imageTag);
+  // document.getElementsByClassName('clothesImg').html(Clothes[rnd].imageTag);
+  // var num = Math.floor(Math.random()*13);
+  // document.getElementsByClassName('clothesImg').html(Clothes[num].imageTag);
 }
 
 function displayTemp(data){

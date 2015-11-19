@@ -3,6 +3,21 @@
   color: white;
 }*/
 
+figure.clothesImg {
+  margin: 0px;
+  padding: 0px;
+  height: 185px;
+  width: 185px;
+}
+
+figure.currentCondition {
+  margin: 0px;
+  padding: 0px;
+  height: 185px;
+  width: 185px;
+}
+
+
 figure.Seasons {
   margin: 0px;
   padding: 0px;
