@@ -24,6 +24,7 @@ function display(weatherYahoo) {
   displaySkies(weatherYahoo)
   displayDate(weatherYahoo)
   correctSeason(weatherYahoo)
+  conditionImage(weatherYahoo)
 }
 
 function displayTemp(data){
@@ -35,6 +36,31 @@ function displaySkies(data){
   $('#skies').text(skies)
 };
 
+function conditionImage (data) {
+  var condition = data.query.results.channel.item.condition.text
+  var splitCondition = condition.split('/');
+  console.log(splitCondition);
+  // if (res ) {
+  //
+  // }
+}
+  // if (numToday >= numSpring && numToday < numSummer) {
+  //   console.log('Spring');
+  //   $('.Seasons').html('<img src="'+seasonImg[0]+'">');
+  // }
+  // else if (numToday >= numSummer && numToday < numFall) {
+  //   console.log('Summer');
+  //   $('.Seasons').html('<img src="'+seasonImg[1]+'">');
+  // }
+  // else if (numToday >= numFall && numToday < numWinter) {
+  //   console.log('Fall');
+  //   $('.Seasons').html('<img src="'+seasonImg[2]+'">');
+  // }
+  // else {
+  //   console.log('Winter');
+  //   $('.Seasons').html('<img src="'+seasonImg[3]+'">');
+  //   }
+  // }
 
 
 
