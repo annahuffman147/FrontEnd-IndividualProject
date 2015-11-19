@@ -26,24 +26,53 @@ function display(weatherYahoo) {
   correctSeason(weatherYahoo)
   correctCondition(weatherYahoo)
   searchDescription(weatherYahoo)
-  displayClothes(weatherYahoo)
+  displayClothes1(weatherYahoo)
+  displayClothes2(weatherYahoo)
+  displayClothes3(weatherYahoo)
+  displayClothes4(weatherYahoo)
+  displayClothes5(weatherYahoo)
+  displayClothes6(weatherYahoo)
 }
 
-function displayClothes () {
+
+var rnd = Math.floor(Math.random() * Clothes.length)
+
+function displayClothes1 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
-  if(rnd == 0){
-    rnd = 1;
-  }
+
   $('#clothes1').html(Clothes[rnd].imageTag);
-  // $('#clothes2').html(Clothes[rnd].imageTag);
-  // $('#clothes3').html(Clothes[rnd].imageTag);
-  // $('#clothes4').html(Clothes[rnd].imageTag);
-  // $('#clothes5').html(Clothes[rnd].imageTag);
-  // $('#clothes6').html(Clothes[rnd].imageTag);
-  // document.getElementsByClassName('clothesImg').html(Clothes[rnd].imageTag);
-  // var num = Math.floor(Math.random()*13);
-  // document.getElementsByClassName('clothesImg').html(Clothes[num].imageTag);
 }
+
+function displayClothes2 () {
+  var rnd = Math.floor(Math.random() * Clothes.length);
+  $('#clothes2').html(Clothes[rnd].imageTag);
+}
+function displayClothes3 () {
+  var rnd = Math.floor(Math.random() * Clothes.length);
+  $('#clothes3').html(Clothes[rnd].imageTag);
+}
+function displayClothes4 () {
+  var rnd = Math.floor(Math.random() * Clothes.length);
+  $('#clothes4').html(Clothes[rnd].imageTag);
+}
+function displayClothes5 () {
+  var rnd = Math.floor(Math.random() * Clothes.length);
+  $('#clothes5').html(Clothes[rnd].imageTag);
+}
+function displayClothes6 () {
+  var rnd = Math.floor(Math.random() * Clothes.length);
+  $('#clothes6').html(Clothes[rnd].imageTag);
+}
+// $('#clothes2').html(Clothes[rnd].imageTag);
+// $('#clothes3').html(Clothes[rnd].imageTag);
+// $('#clothes4').html(Clothes[rnd].imageTag);
+// $('#clothes5').html(Clothes[rnd].imageTag);
+// $('#clothes6').html(Clothes[rnd].imageTag);
+// document.getElementsByClassName('clothesImg').html(Clothes[rnd].imageTag);
+// var num = Math.floor(Math.random()*13);
+// document.getElementsByClassName('clothesImg').html(Clothes[num].imageTag);
+
+
 
 function displayTemp(data){
   var temperature = data.query.results.channel.item.condition.temp
@@ -70,49 +99,12 @@ function searchDescription (data){
   for (var i=0; i<arraylength; i++) {
     if (Conditions[i].description.toLowerCase() === displaySkies(data).toLowerCase()) {
       console.log(Conditions[i].imageTag);
-      $('#conditionImage').html('"'+Conditions[i].imageTag+'"');
+      $('#conditionImage').html(Conditions[i].imageTag);
       return;
     }
-    // if (Conditions[i].indexOf(displaySkies(data))) {
-    //   console.log(true);
-    // }
-    // if (Conditions[i].description === displaySkies(data)) {
-    //   console.log('success')
-    // }
-    //
-    // console.log(Conditions[i].description);
-    // console.log(displaySkies(data));
-
-
-      // $('#conditionImage').html('Conditions.imageTag');
-    // else {
-    //   return false
-    // }
   }
   console.log('Couldn\'t find');
 }
-// var result = Conditions.filter (function (obj){
-//   console.log(obj.description === conditionImage);
-// })
-  // if (numToday >= numSpring && numToday < numSummer) {
-  //   console.log('Spring');
-  //   $('.Seasons').html('<img src="'+seasonImg[0]+'">');
-  // }
-  // else if (numToday >= numSummer && numToday < numFall) {
-  //   console.log('Summer');
-  //   $('.Seasons').html('<img src="'+seasonImg[1]+'">');
-  // }
-  // else if (numToday >= numFall && numToday < numWinter) {
-  //   console.log('Fall');
-  //   $('.Seasons').html('<img src="'+seasonImg[2]+'">');
-  // }
-  // else {
-  //   console.log('Winter');
-  //   $('.Seasons').html('<img src="'+seasonImg[3]+'">');
-  //   }
-  // }
-
-
 
 var fullYear = (new Date().getFullYear())
 

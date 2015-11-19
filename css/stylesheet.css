@@ -4,10 +4,11 @@
 }*/
 
 figure.clothesImg {
-  margin: 0px;
-  padding: 0px;
-  height: 185px;
-  width: 185px;
+  margin: 15px;
+  padding: 15px;
+  height: 150px;
+  width: 150px;
+  display: inline-block
 }
 
 figure.currentCondition {
