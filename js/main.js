@@ -33,7 +33,7 @@ function display(weatherYahoo) {
   displayClothes5(weatherYahoo)
   displayClothes6(weatherYahoo)
 }
-
+// var imageSize = document.getElementsByTagName('img').width = '150px'
 
 var rnd = Math.floor(Math.random() * Clothes.length)
 
@@ -63,15 +63,6 @@ function displayClothes6 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
   $('#clothes6').html(Clothes[rnd].imageTag);
 }
-// $('#clothes2').html(Clothes[rnd].imageTag);
-// $('#clothes3').html(Clothes[rnd].imageTag);
-// $('#clothes4').html(Clothes[rnd].imageTag);
-// $('#clothes5').html(Clothes[rnd].imageTag);
-// $('#clothes6').html(Clothes[rnd].imageTag);
-// document.getElementsByClassName('clothesImg').html(Clothes[rnd].imageTag);
-// var num = Math.floor(Math.random()*13);
-// document.getElementsByClassName('clothesImg').html(Clothes[num].imageTag);
-
 
 
 function displayTemp(data){

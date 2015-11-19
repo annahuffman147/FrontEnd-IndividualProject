@@ -3,11 +3,14 @@
   color: white;
 }*/
 
+* img {
+  max-width: 150px;
+  max-height: 150px
+}
+
 figure.clothesImg {
   margin: 15px;
   padding: 15px;
-  height: 150px;
-  width: 150px;
   display: inline-block
 }
 
@@ -52,7 +55,7 @@ footer {
 }
 .box1 {
   box-sizing: border-box;
-  min-width: 390px
+  min-width: auto;
   height: 170px;
   background-color: none;
   margin: 5px;
