@@ -24,7 +24,8 @@ function display(weatherYahoo) {
   displaySkies(weatherYahoo)
   displayDate(weatherYahoo)
   correctSeason(weatherYahoo)
-  conditionImage(weatherYahoo)
+  correctCondition(weatherYahoo)
+  searchDescription(weatherYahoo)
 }
 
 function displayTemp(data){
@@ -32,18 +33,50 @@ function displayTemp(data){
   $('#temperature').text(temperature)
 };
 function displaySkies(data){
+  console.log(data);
   var skies = data.query.results.channel.item.condition.text
   $('#skies').text(skies)
+  return skies
 };
 
-function conditionImage (data) {
-  var condition = data.query.results.channel.item.condition.text
-  var splitCondition = condition.split('/');
+function correctCondition (data) {
+  var imgData = data.query.results.channel.item.condition.text
+  var splitCondition = imgData.split('/');
   console.log(splitCondition);
-  // if (res ) {
-  //
-  // }
+  return splitCondition
 }
+console.log(Conditions[5]);
+console.log(arraylength);
+
+function searchDescription (data){
+  console.log(data)
+  for (var i=0; i<arraylength; i++) {
+    if (Conditions[i].description.toLowerCase() === displaySkies(data).toLowerCase()) {
+      console.log(Conditions[i].imageTag);
+      $('#conditionImage').html('"'+Conditions[i].imageTag+'"');
+      return;
+    }
+    // if (Conditions[i].indexOf(displaySkies(data))) {
+    //   console.log(true);
+    // }
+    // if (Conditions[i].description === displaySkies(data)) {
+    //   console.log('success')
+    // }
+    //
+    // console.log(Conditions[i].description);
+    // console.log(displaySkies(data));
+
+
+      // $('#conditionImage').html('Conditions.imageTag');
+    // else {
+    //   return false
+    // }
+  }
+  console.log('Couldn\'t find');
+}
+// var result = Conditions.filter (function (obj){
+//   console.log(obj.description === conditionImage);
+// })
   // if (numToday >= numSpring && numToday < numSummer) {
   //   console.log('Spring');
   //   $('.Seasons').html('<img src="'+seasonImg[0]+'">');

@@ -1,3 +1,4 @@
+
 var Conditions = [
   {codeValue: "0",
     description: "tornado",
@@ -135,27 +136,27 @@ var Conditions = [
     imageTag: '<img src="./images/cloudy.svg" alt="Cloudy">'
   },
   {codeValue: "27",
-    description: "mostly cloudy (night)",
+    description: "mostly cloudy",
     imageSource: "./images/mostlyCloudy.svg",
     imageTag: '<img src="./images/mostlyCloudy.svg" alt="Mostly Cloudy">'
   },
   {codeValue: "28",
-    description: "mostly cloudy (day)",
+    description: "mostly cloudy",
     imageSource: "./images/mostlyCloudy.svg",
     imageTag: '<img src="./images/mostlyCloudy.svg" alt="Mostly Cloudy">'
   },
   {codeValue: "29",
-    description: "partly cloudy (night)",
+    description: "partly cloudy",
     imageSource: "./images/partlyCloudy.svg",
     imageTag: '<img src="./images/partlyCloudy.svg" alt="Partly Cloudy">'
   },
   {codeValue: "30",
-    description: "partly cloudy (day)",
+    description: "partly cloudy",
     imageSource: "./images/partlyCloudy.svg",
     imageTag: '<img src="./images/partlyCloudy.svg" alt="Partly Cloudy">'
   },
   {codeValue: "31",
-    description: "clear (night)",
+    description: "clear",
     imageSource: "./images/clearNight.svg",
     imageTag: '<img src="./images/clearNight.svg" alt="Clear Night">'
   },
@@ -165,12 +166,12 @@ var Conditions = [
     imageTag: '<img src="./images/sunny.svg" alt="Sunny">'
   },
   {codeValue: "33",
-    description: "fair (night)",
+    description: "fair",
     imageSource: "./images/fair.svg",
     imageTag: '<img src="./images/fair.svg" alt="Fair">'
   },
   {codeValue: "34",
-    description: "fair (day)",
+    description: "fair",
     imageSource: "./images/fair.svg",
     imageTag: '<img src="./images/fair.svg" alt="Fair">'
   },
@@ -245,3 +246,4 @@ var Conditions = [
     imageTag: 'return "Data Not Available At This Time"'
   }
 ]
+var arraylength = Conditions.length
