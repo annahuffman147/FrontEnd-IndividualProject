@@ -26,14 +26,15 @@ function display(weatherYahoo) {
   correctSeason(weatherYahoo)
   correctCondition(weatherYahoo)
   searchDescription(weatherYahoo)
+  var copyClothes = Clothes.slice(0);
   displayClothes1(weatherYahoo)
   displayClothes2(weatherYahoo)
   displayClothes3(weatherYahoo)
   displayClothes4(weatherYahoo)
   displayClothes5(weatherYahoo)
   displayClothes6(weatherYahoo)
+  Clothes = copyClothes.slice(0);
 }
-// var imageSize = document.getElementsByTagName('img').width = '150px'
 
 var rnd = Math.floor(Math.random() * Clothes.length)
 
@@ -41,36 +42,49 @@ function displayClothes1 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
 
   $('#clothes1').html(Clothes[rnd].imageTag);
+  Clothes.splice(rnd,1);
 }
 
 function displayClothes2 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
   $('#clothes2').html(Clothes[rnd].imageTag);
+  Clothes.splice(rnd,1);
+
+
 }
 function displayClothes3 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
   $('#clothes3').html(Clothes[rnd].imageTag);
+  Clothes.splice(rnd,1);
+
+
 }
 function displayClothes4 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
   $('#clothes4').html(Clothes[rnd].imageTag);
+  Clothes.splice(rnd,1);
+
+
 }
 function displayClothes5 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
   $('#clothes5').html(Clothes[rnd].imageTag);
+  Clothes.splice(rnd,1);
+
+
 }
 function displayClothes6 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
   $('#clothes6').html(Clothes[rnd].imageTag);
+  Clothes.splice(rnd,1);
 }
-
 
 function displayTemp(data){
   var temperature = data.query.results.channel.item.condition.temp
   $('#temperature').text(temperature)
 };
 function displaySkies(data){
-  console.log(data);
+  // console.log(data);
   var skies = data.query.results.channel.item.condition.text
   $('#skies').text(skies)
   return skies
