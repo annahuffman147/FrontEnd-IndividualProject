@@ -4223,6 +4223,7 @@ a.badge:focus {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 15px;
+  padding-left: 200px;
   color: inherit;
   background-color: #f8f5f0;
 }
@@ -4982,6 +4983,11 @@ button.list-group-item-danger.active:focus {
 }
 .panel-success {
   border-color: #d6e9c6;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  padding: 0px;
+  display: inline-block;
 }
 .panel-success > .panel-heading {
   color: #93c54b;
