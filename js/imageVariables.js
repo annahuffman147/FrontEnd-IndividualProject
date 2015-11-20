@@ -333,3 +333,15 @@ var Clothes = [
     imageTag: '<img src="./images/shorts.svg" alt="shorts">'
   }
 ]
+var clickEventImg = [
+  {name: "correct",
+    imageSource: "./images/greenCheck.svg",
+    imageTag: "<img scr='./images/greenCheck.svg' alt='Correct'>",
+    Response: "'That is a great idea for today!'"
+  },
+  {name: "tryAgain",
+    imageSource: "./images/redX.svg",
+    imageTag: "<img scr='./images/redX.svg' alt='Try Again'>",
+    Response: "'That is not the best choice for the weather.'"
+  }
+]
