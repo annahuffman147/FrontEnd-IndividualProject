@@ -40,48 +40,39 @@ var rnd = Math.floor(Math.random() * Clothes.length)
 
 function displayClothes1 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
-
-  $('#clothes1').html(Clothes[rnd].imageTag);
+  $('#clothes1').html(Clothes[rnd].imageTag).addClass(Clothes[rnd].clothingName);
   Clothes.splice(rnd,1);
 }
-
 function displayClothes2 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
-  $('#clothes2').html(Clothes[rnd].imageTag);
+  $('#clothes2').html(Clothes[rnd].imageTag).addClass(Clothes[rnd].clothingName);
   Clothes.splice(rnd,1);
-
-
 }
 function displayClothes3 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
-  $('#clothes3').html(Clothes[rnd].imageTag);
+  $('#clothes3').html(Clothes[rnd].imageTag).addClass(Clothes[rnd].clothingName);
   Clothes.splice(rnd,1);
-
-
 }
 function displayClothes4 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
-  $('#clothes4').html(Clothes[rnd].imageTag);
+  $('#clothes4').html(Clothes[rnd].imageTag).addClass(Clothes[rnd].clothingName);
   Clothes.splice(rnd,1);
-
-
 }
 function displayClothes5 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
-  $('#clothes5').html(Clothes[rnd].imageTag);
+  $('#clothes5').html(Clothes[rnd].imageTag).addClass(Clothes[rnd].clothingName);
   Clothes.splice(rnd,1);
-
-
 }
 function displayClothes6 () {
   var rnd = Math.floor(Math.random() * Clothes.length);
-  $('#clothes6').html(Clothes[rnd].imageTag);
+  $('#clothes6').html(Clothes[rnd].imageTag).addClass(Clothes[rnd].clothingName);
   Clothes.splice(rnd,1);
 }
 
 function displayTemp(data){
   var temperature = data.query.results.channel.item.condition.temp
   $('#temperature').text(temperature)
+  $('#largeTemp').text(temperature)
 };
 function displaySkies(data){
   // console.log(data);
