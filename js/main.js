@@ -15,8 +15,7 @@ $(document).ready(function(){
 });
 
 function checkToSave () {
-  debugger;
-  if ($('#checkToSave').is(':checked')) {
+  if ($('#checkToSave').prop('checked')) {
     localStorage.setItem('city', $('#city').val());
     var city = localStorage.getItem('city')
       console.log(city)
