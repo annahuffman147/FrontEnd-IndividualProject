@@ -1,0 +1,82 @@
+/*.jumbotron {
+  background-color: blue;
+  color: white;
+}*/
+
+* img {
+  width: 200px;
+  height: 200px
+}
+
+#largeTemp {
+  font-size: 150px;
+  font-weight: bold;
+}
+
+figure.clothesImg {
+  margin: 15px;
+  padding: 15px;
+  display: inline-block
+}
+
+figure.currentCondition {
+  margin: 0px;
+  padding: 0px;
+  height: 185px;
+  width: 185px;
+}
+
+
+figure.Seasons {
+  margin: 0px;
+  padding: 0px;
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  position: absolute;
+  vertical-align: center-block;
+  justify-content: center;
+}
+#returndata {
+  display: inline-block;
+  height: auto;
+}
+#temperature {
+  display: inline-block;
+  min-width: 75px
+}
+#skies {
+  display: inline-block;
+  min-width: 170px
+}
+#date {
+  display: inline-block;
+  min-width: 280px
+}
+
+#panelSkies {
+  display: inline-block;
+  position: relative;
+}
+
+#panelTemp {
+  display: inline-block;
+  position: relative;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+}
+.box1 {
+  box-sizing: border-box;
+  min-width: auto;
+  height: 170px;
+  background-color: none;
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  left: 180px;
+}

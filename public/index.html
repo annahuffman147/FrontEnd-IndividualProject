@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='./css/sandstoneBootstrap.css'>
+    <link rel='stylesheet' href="./css/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src='./js/gulpfile.js'></script> -->
+    <script src='./js/imageVariables.js'></script>
+    <script src='./js/main.js'></script>
+    <script src='./js/imageClickEvent.js'></script>
+    <meta charset="utf-8">
+    <title>Dress for the Weather</title>
+  </head>
+  <body>
+      <header>
+        <figure class="Seasons" id='correctSeason'>
+          <img src="./images/fourSeasons.svg" alt="Four Seasons">
+        </figure>
+        <div class="jumbotron">
+          <h1>Dress for the Weather</h1>
+        </div>
+      </header>
+      <main>
+        <div class="panel panel-primary" id="form">
+          <div class="panel-heading">
+            <h3 class="panel-title">Identify your location</h3>
+          </div>
+          <div>
+            <form class="form-horizontal">
+              <fieldset>
+                <div class="form-group">
+                  <label for="GET-city" class="col-lg-2 control-label">City:</label>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control" id="city" placeholder="City">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Get-state" class="col-lg-2 control-label">State:</label>
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control" id="state" placeholder="State">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" id='checkToSave'> Save this location
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-10 col-lg-offset-2">
+                    <button id='submit' type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class='tempAndCondition'>
+          <div class="panel panel-success" id="panelSkies">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Condition</h3>
+            </div>
+            <div class="panel-body">
+              <figure class="currentCondition" id='conditionImage'></figure>
+            </div>
+          </div>
+          <div class="panel panel-success" id="panelTemp">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Temperature</h3>
+            </div>
+            <div class="panel-body" id='largeTemp'>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">What should I wear?</h3>
+          </div>
+          <div class="panel-body" id='clothesImages'>
+            <!-- <div id='clothesImages'> -->
+              <figure class= "clothesImg" id="clothes1"></figure>
+                <caption class="responseCE" id="responseCE"></caption>
+              <figure class= "clothesImg" id="clothes2"></figure>
+                <caption class="responseCE" id="responseCE"></caption>
+              <figure class= "clothesImg" id="clothes3"></figure>
+                <caption class="responseCE" id="responseCE"></caption>
+              <figure class= "clothesImg" id="clothes4"></figure>
+                <caption class="responseCE" id="responseCE"></caption>
+              <figure class= "clothesImg" id="clothes5"></figure>
+                <caption class="responseCE" id="responseCE"></caption>
+              <figure class= "clothesImg" id="clothes6"></figure>
+                <caption class="responseCE" id="responseCE"></caption>
+            <!-- </div> -->
+          </div>
+        </div>
+        <div>
+          <label for="Return-date">Last Updated:</label>
+          <output name="returnDate" id='date'></output>
+        </div>
+      </main>
+  </body>
+</html>
