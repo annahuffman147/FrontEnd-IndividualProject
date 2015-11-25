@@ -4,13 +4,31 @@
 //document ready
 //event listener
 $(document).ready(function(){
+  loadFromLocalStorage ();
   $('#submit').on('click', function(event){
     event.preventDefault();
     city = $('#city').val();
     state = $('#state').val();
-    AJAX(city, state)
+    AJAX(city, state);
+    checkToSave()
   })
 });
+
+function checkToSave () {
+  if ($('#checkToSave').is(':checked')) {
+    localStorage.setItem('city', $('#city').val());
+    var city = localStorage.getItem('city')
+      console.log(city)
+    localStorage.setItem('state', $('#state').val())
+    var state = localStorage.getItem('state')
+      console.log(state)
+  }
+}
+
+function loadFromLocalStorage () {
+  $('#city').val(localStorage.getItem("city"))
+  $('#state').val(localStorage.getItem("state"))
+}
 
 function AJAX(city, state){
   var weatherURL = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + city + '%2C%20' + state +  '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
